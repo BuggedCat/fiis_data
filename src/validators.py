@@ -133,8 +133,8 @@ class DadosEconomicoFinanceiros(BaseModel):
         )
 
 
-class DataItem(BaseModel):
-    id: int = Field(alias="id")
+class FnetDocumento(BaseModel):
+    document_id: int = Field(alias="id")
     descricao_fundo: str = Field(alias="descricaoFundo")
     categoria_documento: str = Field(alias="categoriaDocumento")
     tipo_documento: str = Field(alias="tipoDocumento")
@@ -162,6 +162,6 @@ class APIResponse(BaseModel):
     draw: int
     records_filtered: int = Field(alias="recordsFiltered")
     records_total: int = Field(alias="recordsTotal")
-    data: list[DataItem]
+    documents: list[FnetDocumento] = Field(alias="data")
 
     model_config = ConfigDict(extra="forbid", populate_by_name=True)

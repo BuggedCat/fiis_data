@@ -10,8 +10,10 @@ python = ">=3.11,<3.13"
 pydantic = "^2.4.2"
 pandas = "^2.1.1"
 jupyterlab = "^4.0.7"
-httpx = "^0.25.0"
 types-requests = "^2.31.0.10"
+sqlalchemy = "^2.0.22"
+pydantic-settings = "^2.0.3"
+psycopg2-binary = "^2.9.9"
 
 
 [tool.poetry.group.dev.dependencies]
